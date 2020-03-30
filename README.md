@@ -53,7 +53,7 @@ DDPG allows to get solution for each taining session, but the different number o
 
 * *Wider and deeper NNs*: use neural networks with more neurons in hidden layers and more hidden layers.
 
-* *Change stratagy*: use another algorithms for training agents: A3C, TRPO, PPO, Neuroevolution approach(https://arxiv.org/abs/1712.06567).
+* *Change stratagy*: use another algorithms for training agents: [A3C](https://arxiv.org/abs/1602.01783), [TRPO](https://arxiv.org/abs/1502.05477), [PPO](https://arxiv.org/abs/1707.06347), [Neuroevolution approach](https://arxiv.org/abs/1712.06567).
 
 
 
