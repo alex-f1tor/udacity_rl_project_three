@@ -16,6 +16,8 @@ Each **action** is a vector with 2 numbers, corresponding to movement toward (or
 The task is episodic, and in order to solve the environment, agent must get an average score of +0.5 over 100 consecutive episodes.
 
 ---
+## Software requirements
+
 
 The following python3 libraries are required:
 
@@ -27,35 +29,11 @@ The following python3 libraries are required:
 
 ---
 
-## Actor & Critic Networks
+## Code implementation
 
-To solve the problem both actors were set by multilayer (2 hidden layers) dense neural networks were trained:
+This [notebook](https://github.com/alex-f1tor/udacity_rl_project_three/blob/master/DDPG/Tennis.ipynb) contains full pipeline of training networks:
 
-* Actor Networks: *input* - state vector, *hidden* - two layers 80 neurons, *output* - action 2-values vector;
-* Critic Network: *input* - state & action vectors, *hidden* - two layers 24 & 48 neuron, *output* - advantage scalar value.
-
-As part of the project, the task was solved using the following algorithms:
-
-* DDPG - Deep Deterministic Policy Gradient [notebook](https://github.com/alex-f1tor/udacity_rl_project_three/blob/master/DDPG/Tennis.ipynb)
-
-
-## Results
-
-DDPG allows to get solution for each taining session, but the different number of episodes required:
-
-![Image](https://github.com/alex-f1tor/udacity_rl_project_three/blob/master/imgs/ddpg_collab.png)
-
-
-
-## Future work
-
-* *Fine tune*: choose the optimal parameters for the noise mugnitude, learning rate, discount factor (gamma), soft update magnitude parameter (tau).
-
-* *Wider and deeper NNs*: use neural networks with more neurons in hidden layers and more hidden layers.
-
-* *Change stratagy*: use another algorithms for training agents: A3C, TRPO, PPO, Neuroevolution approach.
-
-
-
-
-
+* Initialization a unity environment;
+* Initialization *Replay buffer* and *Agents* determined in [ddpg_collab_agent.py](https://github.com/alex-f1tor/udacity_rl_project_three/blob/master/DDPG/ddpg_collab_agent.py)
+* Initialization *Actor* and *Critic* neural networks determined in [model.py](https://github.com/alex-f1tor/udacity_rl_project_three/blob/master/DDPG/model.py)
+* Training and saving neural networks models at [models](https://github.com/alex-f1tor/udacity_rl_project_three/tree/master/DDPG/models) folder.
